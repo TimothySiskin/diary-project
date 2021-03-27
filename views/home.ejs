@@ -3,5 +3,11 @@
 <p>
   <%= data %>
 </p>
-
-<%- include('./partials/footer.ejs')-%>
+<% for(i=0; i < posts.length; i++){ %>
+<h1>
+  <%= posts[i].title %>
+</h1>
+<p>
+  <%= posts[i].text %>
+</p>
+<% } %> <%- include('./partials/footer.ejs')-%>
