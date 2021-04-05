@@ -8,6 +8,7 @@
   <%= posts[i].title %>
 </h1>
 <p>
-  <%= posts[i].text %>
+  <%= _.truncate(posts[i].text, {'length' : 100}) %>
+  <a href="/posts/<%= _.kebabCase(posts[i].title) %>">Read More</a>
 </p>
 <% } %> <%- include('./partials/footer.ejs')-%>
